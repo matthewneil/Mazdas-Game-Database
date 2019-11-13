@@ -25,7 +25,7 @@
 	<nav style="position:fixed; top: 78px;">
 			<ul>
 				<li id='homeNav'><a href="index.php">Home</a></li>
-				<li id='addGameNav'><a href="addPlayStation.php">Add Game</a></li>
+				<li id='addGameNav'><a href="addGamePage.php">Add Game</a></li>
 			</ul>
 		</nav>
 		<main>
@@ -43,7 +43,7 @@
 						<option value = "xbox">Xbox</option>
 					</select><br>
 					Game Title: <input class='fullWidth' type="text" name="title" maxlength="40" required><br>
-					<input type="checkbox" name="disc">On Disc<br>
+					<input type="checkbox" name="disc">On Disc/Cartridge<br>
 					<input type="checkbox" name="scom">Story Completed<br>
 					<input type="checkbox" name="fcom">Fully Completed<br>
 				</fieldset>
