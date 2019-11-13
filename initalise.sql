@@ -6,8 +6,8 @@ DROP TABLE pc;
 DROP TABLE game;
 
 CREATE TABLE game (
-    gameID int,
-    title varchar(100),
+    gameID int NOT NULL,
+    title varchar(100) NOT NULL,
     physical bit,
     story bit,
     complete bit,
@@ -18,7 +18,7 @@ CREATE TABLE game (
 INSERT INTO game VALUES(0, 'ignore', 0, 0, 0, 'ignore');
 
 CREATE TABLE ps4 (
-    gID int,
+    gID int NOT NULL,
     platTrophy bit,
     proEnhanced bit,
 	PRIMARY KEY (gID),
