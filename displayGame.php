@@ -19,7 +19,7 @@ require 'databaseConnection.php';
 	<nav style="position:fixed; top: 78px;">
 		<ul>
 			<li id='homeNav'><a href="../index.php">Home</a></li>
-			<li id='addGameNav'><a href="../addGame.php">Add Game</a></li>			
+			<li id='addGameNav'><a href="../addGamePage.php">Add Game</a></li>			
 		</ul>
 	</nav>
 	
@@ -77,7 +77,6 @@ require 'databaseConnection.php';
 					}
 					echo "</section>";
 			}
-			
 			if($platform == 'ps4'){
 				$result = $con->query("SELECT * FROM ps4 WHERE gID = $gameid");
 				while($row = $result->fetch_assoc()) {
@@ -86,6 +85,45 @@ require 'databaseConnection.php';
 					}
 					if ($row['proEnhanced'] == 1){
 						echo "<p>PS4 Pro Enhanced!</p>";
+					}
+				}
+			}
+			
+			if($platform == 'ps3'){
+				$result = $con->query("SELECT * FROM ps3 WHERE gID = $gameid");
+				while($row = $result->fetch_assoc()) {
+					if ($row['platTrophy'] == 1){
+						echo "<p>Platinum Trophy Earned!</p>";
+					}
+				}
+			}
+			
+			if($platform == 'xboxone'){
+				$result = $con->query("SELECT * FROM xboxone WHERE gID = $gameid");
+				while($row = $result->fetch_assoc()) {
+					if ($row['achievements'] == 1){
+						echo "<p>All Achievements Earned!</p>";
+					}
+					if ($row['xEnhanced'] == 1){
+						echo "<p>Xbox One X Enhanced!</p>";
+					}
+				}
+			}
+			
+			if($platform == 'xbox360'){
+				$result = $con->query("SELECT * FROM xbox360 WHERE gID = $gameid");
+				while($row = $result->fetch_assoc()) {
+					if ($row['achievements'] == 1){
+						echo "<p>All Achievements Earned!</p>";
+					}
+				}
+			}
+			
+			if($platform == 'pc'){
+				$result = $con->query("SELECT * FROM pc WHERE gID = $gameid");
+				while($row = $result->fetch_assoc()) {
+					if ($row['achievements'] == 1){
+						echo "<p>All Achievements Earned!</p>";
 					}
 				}
 			}
