@@ -57,15 +57,15 @@ $con->query("INSERT INTO game VALUES ($size, '$title', $disc, $scom, $fcom, '$pl
 
 //Insert the game data into other tables if nessesary
 if($_GET['platforms'] == 'ps4'){
-	$con->query("INSERT INTO ps4 VALUES ($size, $achievements, $enhanced");
+	$con->query("INSERT INTO ps4 VALUES ($size, $achievements, $enhanced)");
 } else if ($_GET['platforms'] == 'ps3'){
-	$con->query("INSERT INTO ps3 VALUES ($size, $achievements");
+	$con->query("INSERT INTO ps3 VALUES ($size, $achievements)");
 } else if ($_GET['platforms'] == 'xboxone'){
-	$con->query("INSERT INTO xboxone VALUES ($size, $achievements, $enhanced");	
+	$con->query("INSERT INTO xboxone VALUES ($size, $achievements, $enhanced)");	
 } else if ($_GET['platforms'] == 'xbox360'){
-	$con->query("INSERT INTO xbox360 VALUES ($size, $achievements");
+	$con->query("INSERT INTO xbox360 VALUES ($size, $achievements)");
 } else if ($_GET['platforms'] == 'pc'){
-	$con->query("INSERT INTO pc VALUES ($size, $achievements");
+	$con->query("INSERT INTO pc VALUES ($size, $achievements)");
 }
 
 #Back to main page
